@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Economy-Wide Modelling</title>
+
+  <!-- JAVASCRIPT -->
+  <script src="./lib/jquery/dist/jquery.min.js"></script>
+  <script src="./lib/fullpage/jquery.fullPage.min.js"></script>
+  <script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./lib/fullpage/jquery.fullPage.css">
+  <link rel="stylesheet" type="text/css" href="./lib/fontawesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="./stylesheets/landing.css">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/animate.css">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="./stylesheets/brandbar.css" />
+  <link rel="stylesheet" type="text/css" href="./stylesheets/app.css" />
+  <link rel="stylesheet" type="text/css" href="./stylesheets/animate.css" />
+
+</head>
+
+<body>
+
+  <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./stylesheets/landing.css">
+    <div>
+
+    <div id="brand-bar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container brandbar-header">
+        <div class="row">
+          <div class="col-md-3">
+            <a id="navLanChg" class="navbar-brand" href="http://www.un.org/en/index.html">Welcome to the United Nations</a>
+          </div>
+          <div class="col-md-9">
+            <a class="site-link" href="https://unite.un.org/analytics/desa/modellingtools">Back to DESA Modelling Tools Homepage
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-container container">
+      <br><br><br>
+      <div class="row">
+        <div class="col-md-1">
+            <img src="./images/logos/logo.png" alt="Home" class="noprint" style="padding-top:15px"/>
+        </div>
+        <div class="col-md-11">
+            <h1>ECONOMY-WIDE MODELLING<h1>
+        </div>
+      </div>
+      <div class="row">
+            <div class="col-md-12 sec-center">
+              <h2><strong>Sorry, your browser is not supported</strong></h2>
+              </br>
+              <p style="font-size:20px;">This web application is designed to work on the following web browsers: Google Chrome, Mozilla Firefox, Safari, and Microsoft Internet Explorer 10 or higher. </br> </p>
+              <p style="font-size:20px;"> Please use or download the latest version here:</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="col-md-4 col-md-offset-1">
+                <a href="https://www.google.com/chrome">
+                  <img src="./images/browsers/browser_chrome.png" class="browser"></img>
+                </a>
+              </div>
+              <div class="col-md-4 col-md-offset-2">
+                <a href="http://www.apple.com/safari/">
+                  <img src="./images/browsers/browser_safari.png" class="browser"></img>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="col-md-4 col-md-offset-1">
+                <a href="https://www.mozilla.org/en-US/firefox/new/">
+                  <img src="./images/browsers/browser_firefox.png" class="browser"></img>
+                </a>
+              </div>
+              <div class="col-md-4 col-md-offset-2">
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                  <img src="./images/browsers/browser_msie.png" class="browser"></img>
+                </a>
+              </div>
+            </div>
+      </div>
+    </div>
+
+    </div>
+    <![endif]-->
+  <![if !IE]>
+
+  <div id="brand-bar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container brandbar-header">
+      <div class="row">
+        <div class="col-md-3">
+          <a id="navLanChg" class="navbar-brand" href="http://www.un.org/en/index.html">Welcome to the United Nations</a>
+        </div>
+        <div class="col-md-9">
+          <a class="site-link" href="https://unite.un.org/analytics/desa/modellingtools">Back to DESA Modelling Tools Homepage
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="buttonHolder" class="row">
+    <div id='scrollText' onclick="downArrow()">
+      <a onclick="downArrow()" class='guide-button'>Start Guide</a>
+    </div>
+    <div id='landingButton'>
+      <a href="visualisation.html" class='dashboard-button'>Explore Policy Scenarios</a>
+    </div>
+  </div>
+  <div id="topArrow" class="arrow-up" style="display: none;">
+    <div class="imgsContainer">
+      <button id="arrowUp" onclick="upArrow()"><i class="fa fa-chevron-up"></i></button>
+    </div>
+  </div>
+  <div id="bottomArrow" class="arrow-down" style="display: none;">
+    <div class="imgsContainer">
+      <button id="arrowDown" onclick="downArrow()"><i class="fa fa-chevron-down"></i></button>
+    </div>
+  </div>
+  <div id='staticButton' style="display: none;">
+    <a href="visualisation.html" class='dashboard-button'>Explore Policy Scenarios</a>
+  </div>
+
+  <div id="fullpage">
+
+    <div class="section" id="section0">
+      <div id="section-heading0" class='container'>
+        <h2 class='title'>ECONOMY-WIDE MODELLING. FUEL TAX AND DEVELOPMENT.</h2>
+
+        <p class='landing-text splash'>
+          Economy-wide models are useful tools for investigating the effects of policies with direct or indirect shock-like repercussions within an economy. Models are based on economic theories and supported by data analytics. The model draws from macroeconomic
+          and sector national accounts data, supply-use tables and institutional data organized in a social accounting matrix format, and are informed by empirically derived behavioural rules for consumers, producers, investors and governments.
+        </p>
+      </div>
+    </div>
+
+    <div class="section" id="section1">
+      <div id="section-heading2" class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h1 class="section-heading">Informing Development Policies</h1>
+            <br>
+            <p class='landing-text'>The Fuel Tax and Development visualization was designed to illustrate the trade-offs and potential synergies involved in an important sustainable development policy: Introducing a tax on fuel as a proxy for carbon tax (see publication).</p>
+            <p class='landing-text'>The illustration hinges on the question of how the newly generated tax revenue is spent or recycled back into the economy, e.g. applying the new revenue to a simple expansion of initial budget, to expenditures in education, or to infrastructural
+              investment.
+            </p>
+          </div>
+          <div class="col-md-5 image-container">
+            <img class="side-image" src="images/smoke.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="section3">
+      <div id="section-heading2" class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="section-heading">Modelling Strategy</h1>
+            <br>
+            <p class='landing-text'>
+              The analysis starts by estimating a reference/base scenario. This is defined as an scenario where the economy of each country grows at a constant rate of 4 to 7 percent, preserving the same macro-stance and the same sector composition as in the initial
+              year.
+            </p>
+            <p class='landing-text'>
+              Then policy scenarios introduce the fuel tax (a proxy for a carbon-tax) following the yearly schedule needed to achieve the 2 percent points of GDP by 2030. For each year the model calculates a new equilibrium including the direct or indirect effects
+              of the policy. This “new” state of the economy is used, together with other factors such as population growth and new capital stock, to estimate next year’s starting state of the economy (i.e. recursively). In all policy scenarios, the economy
+              maintains the same ratio of public budget deficit to GDP as in the reference scenario.
+            </p>
+            <p class='landing-text'>
+              The values of the selected impact indicators in the base and policy scenario of choice are displayed in a time series plot and for the selected year the simulation percent change relative to base is shown on a bar plot (right).
+            </p>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 image-container">
+            <img class="main-image" src="images/result.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="section2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="section-heading">Visualising Results</h1>
+            <br>
+            <p class="landing-text">
+              This visualisation features four policy scenarios and six impact indicators/variables. </p>
+            <div class="row">
+              <div class="col-md-6">
+                <h3 style="text-align:left">Scenarios</h3>
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <td><b>Budget expansion</b> proportionally directs new revenue to all budget lines.</td>
+                    </tr>
+                    <tr>
+                      <td><b>Infrastructure</b> directs new revenue to public infrastructure</td>
+                    </tr>
+                    <tr>
+                      <td><b>Primary education</b> directs new revenue to primary education</td>
+                    </tr>
+                    <tr>
+                      <td><b>All education</b> directs new revenue proportionally to all education levels</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-6">
+                <h3 style="text-align:left">Impact Variables</h3>
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                      <td><b>Primary completion rate</b> (% of cohort)</td>
+                    </tr>
+                    <tr>
+                      <td><b>Under-five mortality rate</b> (per 1,000 live births)</td>
+                    </tr>
+                    <tr>
+                      <td><b>Maternal mortality</b> (per 100,000 live birds)</td>
+                    </tr>
+                    <tr>
+                      <td><b>Drinking water</b> (% of population)</td>
+                    </tr>
+                    <tr>
+                      <td><b>Basic sanitation</b> (% of population)</td>
+                    </tr>
+                    <tr>
+                      <td><b>Real GDP </b> (millions >>>> --at factor prices)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section" id="section5">
+      <div id="section-heading3" class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="section-heading">Insights</h1>
+            <p class='landing-text'>
+              For each selected year, the visualisation looks at the impact of the policy scenario on the selected indicator as a percent change relative to the value in the base scenario. To give a sense of trade-offs and synergies, the same percent change between
+              the policy and the base scenario can be seen from three different perspectives in the three lower plots.
+            </p>
+            <div class="col-md-4">
+              <p class='landing-text'>
+                Looking at 2030, recycling the fuel tax to infrastructure investment in Uganda worsens all social indicators and GDP, but leaves primary education unchanged.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <p class='landing-text'>
+                Looking at 2030, recycling the fuel tax to infrastructure or education has the unwelcoming effect of raising infant mortality in Uganda, but if the tax is recycled to all budget lines infant mortality actually decreases.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <p class='landing-text'>
+                Looking at 2030, the same fuel tax recycling to infrastructure investment that has the effect of raising infant mortality in Uganda, has the welcoming effect of reducing it in Bolivia, and leaving unaffected in Costa Rica.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 image-container">
+            <img class="main-image" src="images/insight.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/landing.js"></script>
+
+</body>
+
+</html>
