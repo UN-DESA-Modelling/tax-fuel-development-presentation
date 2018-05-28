@@ -51,11 +51,13 @@ $(document).ready(function() {
           $('#arrowDown').css("display", "none");
           $('#scrollText').css('display', '')
           $('#landingButton').css('display', '')
+          $('#materialButton').css('display', '')
         } else {
           $('#topArrow').css("display", "");
           $('#arrowDown').css("display", "");
           $('#scrollText').css('display', 'none')
           $('#landingButton').css('display', 'none')
+          $('#materialButton').css('display', 'none')
         }
       }
     });
